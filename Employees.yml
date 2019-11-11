@@ -1,0 +1,10 @@
+---
+-Employees:
+ - name: sarath
+   empid: 544815
+   phno: 1234543210
+   email: sarath@test.com
+ - name: chandra
+   empid: 544816
+   phno: 1234543211
+   email: chandra@test.com
