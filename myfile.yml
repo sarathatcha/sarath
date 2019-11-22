@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+   - name: My file creation
+     file:
+      path: /home/sara/sarath.txt
+      state: touch
