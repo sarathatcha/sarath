@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   tasks:
-  - name: Install Java
+  - name: Install Java on ubuntu
     apt:
      name: "{{javaonubuntu}}"
      state: present
