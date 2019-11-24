@@ -8,9 +8,9 @@
       state: present
     when: ansible_os_family =="Debian"
 
-  - namee: install wget
+  - name: install wget
     apt:
-      name: wget
+      namee: wget
       state: present
     ignore_errors: yes
     when: ansible_os_family =="Debian"
