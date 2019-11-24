@@ -8,15 +8,15 @@
       state: present
     when: ansible_os_family =="Debian"
 
-  - namee: install tree
+  - namee: install wget
     apt:
-      name: tree
+      name: wget
       state: present
     ignore_errors: yes
     when: ansible_os_family =="Debian"
 
-  - name: install wget
+  - name: install tree
     apt:
-      name: wget
+      name: tree
       state: present
     when: ansible_os_family =="Debian"
