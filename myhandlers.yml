@@ -1,0 +1,29 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: install webservers on redhat
+    yum:
+     name: httpd
+     state: present
+    notify: restartwebserver
+    when: ansible_os_family =="RedHat"
+
+  - name: install wget on redhat
+    yum:
+     name: wget
+     state: present
+    when: ansible_os_family =="RedHat"
+
+  - name: copy myindex.j2 onto redhat server
+    template:
+     src: myindex.j2
+     dest: /var/www/html/index.html
+    notify: restartwebserver
+    when: ansible_os_family =="RedHat"
+
+  handlers:
+  - name: restartwebserver
+    service: 
+     name: httpd
+     state: restarted
