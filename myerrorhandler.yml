@@ -12,7 +12,6 @@
     apt:
       namee: wget
       state: present
-    ignore_errors: yes
     when: ansible_os_family =="Debian"
 
   - name: install tree
