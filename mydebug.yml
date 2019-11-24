@@ -1,5 +1,5 @@
 ---
-- hosts: webservers
+- hosts: 172.31.24.248
   become: yes
   tasks:
   - name: execute linux command
@@ -15,11 +15,9 @@
      name: git
      state: present
     when: myresult.stderr==""
-    when: ansible_os_family =="Debian"
 
   - name: install tree
     apt:
      name: tree
      state: present
     when: myresult.stderr!=""
-    when: ansible_os_family =="Debian"
