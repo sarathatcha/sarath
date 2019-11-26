@@ -1,0 +1,14 @@
+---
+- hosts: win
+  tasks:
+   - name: ping my win hosts
+     win_ping:
+   - name: Install git
+     win_chocolatey:
+      name: git
+      state: present
+   - name: Install firefox
+     win_chocolatey:
+      name: Firefox
+      state: present
+     
