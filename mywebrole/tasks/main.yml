@@ -1,2 +1,3 @@
 ---
 # tasks file for mywebrole
+- include_tasks: myinstalljava.yml

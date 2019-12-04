@@ -1,0 +1,9 @@
+- ec2:
+  key_name: AKIAUXSS2JIXXDWJ6COI
+  instance_type: t2.micro
+  image: ami-01fbe482d119b371c
+  wait: yes
+  group: webserver
+  count: 3
+  vpc_subnet_id: subnet-eda51ea1
+  assign_public_ip: yes

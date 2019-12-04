@@ -1,0 +1,8 @@
+---
+- name: make directory
+  file:
+   path: /opt/tomcat
+   state: directory
+- name: extract tom tar gz file
+  command:
+   cmd: sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
