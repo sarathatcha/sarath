@@ -1,5 +1,6 @@
+
 - ec2:
-   key_name: AKIAUXSS2JIXXDWJ6COI
+   key_name: sarath
    instance_type: t2.micro
    image: ami-01fbe482d119b371c
    wait: yes
